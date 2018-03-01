@@ -5,12 +5,12 @@ module.exports = function solveSudoku(matrix) {
   for(let i = 0; i<arrayApp.length; i++){
     for(let j = 0; j<arrayApp[i].length; j++){
       if(matrix[i][j] == 0){
-        arrayApp[i][j] = array;
+        arrayApp[i][j] = [1,2,3,4,5,6,7,8,9]; // array
       }
     }
   }
   return arrayApp;
-}
+};
   function sLine (arrayApp){
   let arrPos = [];
   for(let i = 0; i<arrayApp.length; i++){
@@ -32,7 +32,7 @@ module.exports = function solveSudoku(matrix) {
       }
     }
     return arrayApp;
-  }
+  };
   function sColumn (arrayApp){
   for(let i = 0; i<9; i++){
     for(let j = 0; j<9; j++){
@@ -51,6 +51,6 @@ module.exports = function solveSudoku(matrix) {
     }
   }
   return arrayApp;
-}
+};
   return sColumn(sLine(repl0(arrayApp)));
-}
+};
